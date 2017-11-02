@@ -439,7 +439,7 @@ typedef enum {
   ASP_15x11 = 11,
   ASP_64x33 = 12,
   ASP_160x99 = 13,
-  
+
   ASP_EXT_SAR = 255
 } ESampleAspectRatio;
 
@@ -493,7 +493,7 @@ typedef enum {
 * @brief Enumulate the complexity mode
 */
 typedef enum {
-  LOW_COMPLEXITY,             ///< the lowest compleixty,the fastest speed,
+  LOW_COMPLEXITY = 0 ,             ///< the lowest compleixty,the fastest speed,
   MEDIUM_COMPLEXITY,          ///< medium complexity, medium speed,medium quality
   HIGH_COMPLEXITY             ///< high complexity, lowest speed, high quality
 } ECOMPLEXITY_MODE;
@@ -744,7 +744,11 @@ typedef struct TagVideoEncoderStatistics {
   unsigned int uiLTRSentNum;                   ///< number of LTR sent/marked
 
   long long    iStatisticsTs;                  ///< Timestamp of updating the statistics
-} SEncoderStatistics; // in building, coming soon
+
+  unsigned long iTotalEncodedBytes;
+  unsigned long iLastStatisticsBytes;
+  unsigned long iLastStatisticsFrameCount;
+} SEncoderStatistics;
 
 /**
 * @brief  Structure for decoder statistics
