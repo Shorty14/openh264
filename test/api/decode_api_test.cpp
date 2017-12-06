@@ -745,7 +745,7 @@ const char* const pHashStr[][2] = { //DO NOT CHANGE!
   // vertically or horizontally first when downsampling.
   { "caaaa3352ab8614e3a35836f5d7c9a528294e953", "326cc236e9ba5277aedc5cf0865dd4cbd2f89fe0" },
   { "2dc97661e94515d9947a344127062f82814afc2a", "72f36bb33d190979be88077c6166a09767dd2992" },
-  { "53285893bf31309b28dd5c6ce0dc3619960470a2", "106ec96a90412aabea5c0cfa6bfc654a0b5db33e" }
+  { "53285893bf31309b28dd5c6ce0dc3619960470a2", "998c2947bccf140bde1e43e29376614038eb7c71" }
 };
 
 class DecodeParseAPI : public ::testing::TestWithParam<EncodeDecodeFileParamBase>, public EncodeDecodeTestBase {
