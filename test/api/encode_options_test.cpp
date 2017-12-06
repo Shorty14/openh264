@@ -1975,7 +1975,7 @@ TEST_F (EncodeDecodeTestAPI, ProfileLevelSetting) {
   }
 
   ASSERT_TRUE (iDecProfileIdc == iEncProfileIdc) << "enc_profile = " << iEncProfileIdc << "  dec_profile = " <<
-      iDecProfileIdc;
+    iDecProfileIdc;
 
   //check whether the level is changed according to level limitation
   ELevelIdc uiLevel = LEVEL_UNKNOWN;
@@ -1992,7 +1992,7 @@ TEST_F (EncodeDecodeTestAPI, ProfileLevelSetting) {
   decoder_->GetOption (DECODER_OPTION_LEVEL, &iDecLevelIdc);
 
   if (iEncLevelIdc == LEVEL_UNKNOWN)
-    ASSERT_TRUE (iDecLevelIdc == LEVEL_5_2) << "enc_level = " << iEncLevelIdc << "  dec_level = " << iDecLevelIdc;
+    ASSERT_TRUE (iDecLevelIdc != LEVEL_UNKNOWN) << "enc_level = " << iEncLevelIdc << "  dec_level = " << iDecLevelIdc;
   else
     ASSERT_TRUE (iDecLevelIdc == iEncLevelIdc) << "enc_level = " << iEncLevelIdc << "  dec_level = " << iDecLevelIdc;
 
@@ -2051,7 +2051,7 @@ TEST_F (EncodeDecodeTestAPI, ProfileLevelSetting) {
   decoder_->GetOption (DECODER_OPTION_LEVEL, &iDecLevelIdc);
 
   if (iEncLevelIdc == LEVEL_UNKNOWN)
-    ASSERT_TRUE (iDecLevelIdc == LEVEL_5_2) << "enc_level = " << iEncLevelIdc << "  dec_level = " << iDecLevelIdc;
+    ASSERT_TRUE (iDecLevelIdc != LEVEL_5_2) << "enc_level = " << iEncLevelIdc << "  dec_level = " << iDecLevelIdc;
   else
     ASSERT_TRUE (iDecLevelIdc == iEncLevelIdc) << "enc_level = " << iEncLevelIdc << "  dec_level = " << iDecLevelIdc;
 
