@@ -744,7 +744,7 @@ const char* const pHashStr[][2] = { //DO NOT CHANGE!
   // Allow for different output depending on whether averaging is done
   // vertically or horizontally first when downsampling.
   { "caaaa3352ab8614e3a35836f5d7c9a528294e953", "326cc236e9ba5277aedc5cf0865dd4cbd2f89fe0" },
-  { "2dc97661e94515d9947a344127062f82814afc2a", "7038437cde13a9354c337ce6180543ca20d13663" },
+  { "2dc97661e94515d9947a344127062f82814afc2a", "72f36bb33d190979be88077c6166a09767dd2992" },
   { "53285893bf31309b28dd5c6ce0dc3619960470a2", "106ec96a90412aabea5c0cfa6bfc654a0b5db33e" }
 };
 
