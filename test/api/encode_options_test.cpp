@@ -1956,8 +1956,8 @@ TEST_F (EncodeDecodeTestAPI, ProfileLevelSetting) {
   sParam.iEntropyCodingModeFlag = rand() % 2;
   sParam.sSpatialLayers[0].iSpatialBitrate = sParam.iTargetBitrate = 3000;
 
-  //int TraceLevel = WELS_LOG_DEBUG;
-  //encoder_->SetOption (ENCODER_OPTION_TRACE_LEVEL, &TraceLevel);
+  int TraceLevel = WELS_LOG_DEBUG;
+  encoder_->SetOption (ENCODER_OPTION_TRACE_LEVEL, &TraceLevel);
   //decoder_->SetOption (DECODER_OPTION_TRACE_LEVEL, &TraceLevel);
   iEncProfileIdc = profileList[rand() % 11];
   iEncLevelIdc =  levelList[rand() % 18];
