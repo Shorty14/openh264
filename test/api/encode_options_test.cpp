@@ -2035,7 +2035,11 @@ TEST_F (EncodeDecodeTestAPI, ProfileLevelSetting) {
   decoder_->GetOption (DECODER_OPTION_PROFILE, &iDecProfileIdc);
 
   if ((iEncProfileIdc != PRO_BASELINE) && (iEncProfileIdc != PRO_MAIN) && (iEncProfileIdc != PRO_HIGH)) {
-    iEncProfileIdc = PRO_BASELINE;
+    if (sParam.iEntropyCodingModeFlag) {
+      iEncProfileIdc = PRO_HIGH;
+    } else {
+      iEncProfileIdc = PRO_BASELINE;
+    }
   }
 
   ASSERT_TRUE (iDecProfileIdc == iEncProfileIdc) << "enc_profile = " << iEncProfileIdc << "  dec_profile = " <<
